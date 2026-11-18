@@ -1,0 +1,35 @@
+.legal-hero { padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter) clamp(3rem, 7vw, 5rem); }
+.legal-hero h1 { font-size: clamp(2.2rem, 5vw, 4rem); line-height: 1.02; letter-spacing: -.045em; font-weight: 800; }
+.legal-hero p { max-width: 32em; margin-top: 1rem; color: #2b2015; font-size: 1.15rem; }
+
+.legal { padding: clamp(3.5rem, 8vw, 6rem) 0; }
+.legal-grid { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: clamp(2rem, 6vw, 6rem); }
+
+.legal-nav { position: sticky; top: 2rem; align-self: start; display: grid; gap: .3rem; }
+.legal-nav a { padding: .6rem 1rem; border-radius: 12px; color: var(--muted); font-weight: 600; text-decoration: none; }
+.legal-nav a:hover { background: var(--mint); color: var(--green); }
+.legal-nav a[aria-current="page"] { background: var(--green); color: #fff; }
+.updated { margin-top: 1rem; padding: 0 1rem; color: var(--muted); font-size: .85rem; }
+
+.legal-text { max-width: 44rem; }
+.legal-text h2 { margin: 2.8rem 0 .9rem; font-size: 1.35rem; letter-spacing: -.02em; }
+.legal-text h2:first-child { margin-top: 0; }
+.legal-text p, .legal-text li { color: #33443c; }
+.legal-text p + p { margin-top: .9rem; }
+.legal-text ul { display: grid; gap: .5rem; margin: .9rem 0; padding-left: 1.2rem; }
+.legal-text li::marker { color: var(--orange); }
+.legal-text a { color: var(--green-mid); font-weight: 600; }
+.legal-text .data { padding: 1.4rem 1.6rem 1.4rem 2.6rem; border-radius: 18px; background: var(--mint); }
+
+.todo { padding: .05em .4em; border-radius: 6px; background: #FFE08A; color: #5a4300; font-weight: 600; }
+
+.good-news { margin-bottom: 3rem; padding: 1.6rem 1.8rem; border-radius: 22px; background: var(--green); color: #cfe0d4; }
+.gn-title { margin-bottom: .3rem; color: #fff; font: 700 1.35rem var(--display); letter-spacing: -.02em; }
+.legal-text .good-news p { color: #cfe0d4; }
+.legal-text .good-news .gn-title { color: #fff; }
+
+@media (max-width: 820px) {
+  .legal-grid { grid-template-columns: 1fr; }
+  .legal-nav { position: static; display: flex; flex-wrap: wrap; }
+  .updated { width: 100%; margin-top: .4rem; padding: 0; }
+}
