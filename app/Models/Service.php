@@ -6,12 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    protected $fillable = ['slug', 'nombre', 'resumen', 'incluye', 'orden', 'destacado'];
+    protected $fillable = ['slug', 'nombre', 'resumen', 'contenido', 'incluye', 'orden', 'destacado'];
 
     protected function casts(): array
     {
         return [
             'incluye'   => 'array',
+            'contenido' => 'array',
             'destacado' => 'boolean',
         ];
     }

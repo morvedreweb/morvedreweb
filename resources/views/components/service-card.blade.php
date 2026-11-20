@@ -14,7 +14,7 @@
     @endforeach
   </ul>
 
-  <a href="{{ route('home') }}#solicitar" @class(['btn', 'btn-orange' => $service->destacado, 'btn-outline' => ! $service->destacado])>
-    Pedir información
+  <a href="{{ route('services.show', $service) }}" @class(['btn', 'btn-orange' => $service->destacado, 'btn-outline' => ! $service->destacado])>
+    Ver el servicio
   </a>
 </article>

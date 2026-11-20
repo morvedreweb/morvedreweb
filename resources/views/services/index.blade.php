@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Servicios | morvedreweb')
-@section('description', 'Diseño web, SEO y ficha de Google, Google Ads, reservas online, pagos y mantenimiento para negocios.')
+@section('title', 'Servicios de diseño web y SEO en Sagunto | morvedreweb')
+@section('description', 'Diseño web, SEO local y ficha de Google, Google Ads, reservas online, pagos y mantenimiento para negocios de Sagunto y el Camp de Morvedre.')
 @section('hero_class', 'hero-small')
 
 @push('styles')

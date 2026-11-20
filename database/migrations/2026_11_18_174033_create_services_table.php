@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('nombre');
             $table->string('resumen');
+            $table->json('contenido')->nullable();
             $table->json('incluye');
             $table->unsignedSmallInteger('orden')->default(0);
             $table->boolean('destacado')->default(false);

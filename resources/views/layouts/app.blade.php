@@ -7,7 +7,30 @@
   @hasSection('description')
     <meta name="description" content="@yield('description')">
   @endif
+  <link rel="canonical" href="{{ url()->current() }}">
   @stack('meta')
+
+  {{-- Vista previa al compartir el enlace (WhatsApp, redes, etc.) --}}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="morvedreweb">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="{{ url()->current() }}">
+  @hasSection('og_title')
+    <meta property="og:title" content="@yield('og_title')">
+  @else
+    <meta property="og:title" content="@yield('title')">
+  @endif
+  @hasSection('og_description')
+    <meta property="og:description" content="@yield('og_description')">
+  @else
+    @hasSection('description')
+      <meta property="og:description" content="@yield('description')">
+    @endif
+  @endif
+  <meta property="og:image" content="{{ asset('img/og-image.png') }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#FF7A1A">
   <link rel="icon" href="{{ asset('img/favicon.svg') }}" type="image/svg+xml">
   @stack('preload')

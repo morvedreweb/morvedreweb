@@ -1,47 +1,56 @@
 @extends('layouts.app')
 
-@section('title', 'morvedreweb | Diseño web a medida para negocios')
-@section('description', 'Diseñamos la web de tu negocio y la mantenemos cada mes: dominio, hosting, Google y cambios incluidos. Desde Sagunto, para negocios de cualquier sitio.')
-
-@push('meta')
-  <link rel="canonical" href="https://www.morvedreweb.es/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="morvedreweb | Webs que dan ganas de entrar">
-  <meta property="og:description" content="Webs para negocios, hechas a medida y mantenidas cada mes. Desde Sagunto, para cualquier sitio.">
-  <meta property="og:locale" content="es_ES">
-
-@endpush
+@section('title', 'Diseño web en Sagunto para negocios | morvedreweb')
+@section('description', 'Diseño web en Sagunto y el Camp de Morvedre: hacemos la web de tu negocio y la mantenemos cada mes, con dominio, hosting y Google incluidos.')
+@section('og_title', 'morvedreweb | Webs que dan ganas de entrar')
+@section('og_description', 'Webs para negocios, hechas a medida y mantenidas cada mes. Desde Sagunto, para cualquier sitio.')
 
 @push('preload')
   <link rel="preload" href="{{ asset('fonts/unbounded-latin-800-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
 @endpush
 
-@push('head')
-@verbatim
+@php
+  // Datos estructurados para Google (schema.org). Revisad areaServed: solo zonas donde trabajéis de verdad.
+  // Cuando tengáis la ficha de Google Business Profile, añadid su enlace en 'sameAs'.
+  $negocio = [
+      '@context'    => 'https://schema.org',
+      '@type'       => 'ProfessionalService',
+      '@id'         => url('/') . '#negocio',
+      'name'        => 'morvedreweb',
+      'description' => 'Diseño web en Sagunto: creamos y mantenemos páginas web para negocios del Camp de Morvedre y Valencia por una cuota mensual.',
+      'url'         => url('/'),
+      'logo'        => asset('img/logo.png'),
+      'image'       => asset('img/og-image.png'),
+      'telephone'   => '+34691200175',
+      'email'       => 'morvedreweb@gmail.com',
+      'address'     => [
+          '@type'           => 'PostalAddress',
+          'addressLocality' => 'Sagunto',
+          'addressRegion'   => 'Valencia',
+          'addressCountry'  => 'ES',
+      ],
+      'areaServed'  => [
+          ['@type' => 'City', 'name' => 'Sagunto'],
+          ['@type' => 'City', 'name' => 'Canet d\'en Berenguer'],
+          ['@type' => 'City', 'name' => 'Puçol'],
+          ['@type' => 'AdministrativeArea', 'name' => 'Camp de Morvedre'],
+          ['@type' => 'City', 'name' => 'Valencia'],
+      ],
+      'priceRange'  => '90€-600€ + mantenimiento mensual',
+      // 'sameAs'   => ['https://g.page/...'],
+  ];
+@endphp
 
+@push('head')
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "morvedreweb",
-    "description": "Diseño y mantenimiento de páginas web para negocios por cuota mensual.",
-    "url": "https://www.morvedreweb.es/",
-    "telephone": "+34691200175",
-    "email": "morvedreweb@gmail.com",
-    "address": { "@type": "PostalAddress", "addressLocality": "Sagunto", "addressRegion": "Valencia", "addressCountry": "ES" },
-    "areaServed": { "@type": "Country", "name": "España" },
-    "priceRange": "90€-600€ + mantenimiento mensual"
-  }
+{!! json_encode($negocio, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_HEX_TAG | JSON_PRETTY_PRINT) !!}
   </script>
-@endverbatim
 @endpush
 
 @section('hero')
-  {{-- pega el <div class="hero-grid wrap"> ... </div> completo --}}
   <div class="hero-grid wrap">
       <div class="hero-copy">
-        <p class="hero-pre">Webs para pymes y negocios, desde Sagunto</p>
+        <p class="hero-pre">Diseño web en Sagunto para pymes y negocios</p>
         <h1 class="hero-title">
           <span class="line"><span>Webs que dan</span></span>
           <span class="line"><span>ganas de entrar</span></span>

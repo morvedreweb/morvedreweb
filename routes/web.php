@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\SitemapController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitudController;
 
@@ -12,6 +13,9 @@ Route::view('/', 'pages.home')->name('home');
 Route::view('/conocenos', 'pages.about')->name('about');
 
 Route::get('/servicios', [ServiceController::class, 'index'])->name('services.index');
+Route::get('/servicios/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
+
+Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 
 Route::view('/aviso-legal', 'legal.aviso')->name('legal.aviso');
 Route::view('/privacidad', 'legal.privacidad')->name('legal.privacidad');
