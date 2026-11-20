@@ -1,5 +1,5 @@
 User-agent: *
 Disallow:
 
-# Cambiad el dominio si al final compráis otro
-Sitemap: https://www.morvedreweb.es/sitemap.xml
+# Dominio principal (sin www)
+Sitemap: https://morvedreweb.com/sitemap.xml

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\RedirigirAlDominioPrincipal;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,6 +16,9 @@ return Application::configure(basePath: dirname(__DIR__))
         // Railway pone un proxy delante de la app: confiamos en él para leer
         // la IP real del visitante (throttle del formulario) y detectar HTTPS.
         $middleware->trustProxies(at: '*');
+
+        // www.morvedreweb.com -> morvedreweb.com (solo en producción)
+        $middleware->prepend(RedirigirAlDominioPrincipal::class);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(

@@ -6,7 +6,7 @@
 
 @section('legal_content')
         <h2>1. Quiénes somos</h2>
-        <p>En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), estos son los datos del titular de morvedreweb.es:</p>
+        <p>En cumplimiento de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), estos son los datos del titular de morvedreweb.com:</p>
         <ul class="data">
           <li><b>Titular:</b> <mark class="todo">nombre y apellidos o razón social</mark></li>
           <li><b>NIF:</b> <mark class="todo">NIF</mark></li>
