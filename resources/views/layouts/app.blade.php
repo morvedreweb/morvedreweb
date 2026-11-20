@@ -34,7 +34,8 @@
   <meta name="theme-color" content="#FF7A1A">
   <link rel="icon" href="{{ asset('img/favicon.svg') }}" type="image/svg+xml">
   @stack('preload')
-  <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+  {{-- ?v= cambia cuando cambia el archivo: así el navegador no usa una versión antigua guardada en caché --}}
+  <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
   @stack('styles')
   @stack('head')
 </head>
@@ -55,6 +56,6 @@
   @include('partials.footer')
 
   @stack('scripts')
-  <script src="{{ asset('js/main.js') }}"></script>
+  <script src="{{ asset('js/main.js') }}?v={{ filemtime(public_path('js/main.js')) }}"></script>
 </body>
 </html>
