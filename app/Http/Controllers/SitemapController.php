@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
-
 class SitemapController extends Controller
 {
     // Mapa del sitio para Google: solo páginas indexables (las legales llevan noindex).
     public function __invoke()
     {
-        $services = Service::ordenados()->get();
+        $services = collect(config('servicios'));
 
         return response()
             ->view('sitemap', compact('services'))

@@ -2,18 +2,15 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    use WithoutModelEvents;
-
     /**
-     * Seed the application's database.
+     * La web no usa base de datos para su contenido: los servicios están en config/servicios.php.
      */
     public function run(): void
     {
-        $this->call(ServiceSeeder::class);
+        //
     }
 }

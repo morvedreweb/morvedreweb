@@ -13,7 +13,9 @@ Route::view('/', 'pages.home')->name('home');
 Route::view('/conocenos', 'pages.about')->name('about');
 
 Route::get('/servicios', [ServiceController::class, 'index'])->name('services.index');
-Route::get('/servicios/{service:slug}', [ServiceController::class, 'show'])->name('services.show');
+Route::get('/servicios/{slug}', [ServiceController::class, 'show'])
+    ->where('slug', '[a-z0-9-]+')
+    ->name('services.show');
 
 Route::get('/sitemap.xml', SitemapController::class)->name('sitemap');
 

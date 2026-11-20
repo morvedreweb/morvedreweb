@@ -7,10 +7,7 @@
 @endforeach
 @foreach ($services as $service)
   <url>
-    <loc>{{ route('services.show', $service) }}</loc>
-    @if ($service->updated_at)
-    <lastmod>{{ $service->updated_at->toAtomString() }}</lastmod>
-    @endif
+    <loc>{{ route('services.show', $service['slug']) }}</loc>
   </url>
 @endforeach
 </urlset>

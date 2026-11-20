@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', $service->nombre . ' en Sagunto | morvedreweb')
-@section('description', $service->resumen)
+@section('title', $service['nombre'] . ' en Sagunto | morvedreweb')
+@section('description', $service['resumen'])
 @section('hero_class', 'hero-small')
 
 @push('styles')
@@ -11,8 +11,8 @@
 
 @section('hero')
   <div class="wrap about-hero">
-    <h1>{{ $service->nombre }}</h1>
-    <p>{{ $service->resumen }}</p>
+    <h1>{{ $service['nombre'] }}</h1>
+    <p>{{ $service['resumen'] }}</p>
   </div>
 @endsection
 
@@ -20,13 +20,13 @@
   <section class="legal">
     <div class="wrap">
       <article class="legal-text">
-        @foreach ($service->contenido ?? [] as $parrafo)
+        @foreach ($service['contenido'] ?? [] as $parrafo)
           <p>{{ $parrafo }}</p>
         @endforeach
 
         <h2>Qué incluye</h2>
         <ul>
-          @foreach ($service->incluye as $item)
+          @foreach ($service['incluye'] as $item)
             <li>{{ $item }}</li>
           @endforeach
         </ul>
@@ -35,7 +35,7 @@
           <h2>Otros servicios</h2>
           <ul>
             @foreach ($otros as $otro)
-              <li><a href="{{ route('services.show', $otro) }}">{{ $otro->nombre }}</a></li>
+              <li><a href="{{ route('services.show', $otro['slug']) }}">{{ $otro['nombre'] }}</a></li>
             @endforeach
           </ul>
         @endif
