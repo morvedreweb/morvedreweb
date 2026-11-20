@@ -2,6 +2,11 @@
 
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SolicitudController;
+
+Route::post('/solicitar', SolicitudController::class)
+    ->middleware('throttle:3,10')
+    ->name('solicitud.store');
 
 Route::view('/', 'pages.home')->name('home');
 Route::view('/conocenos', 'pages.about')->name('about');

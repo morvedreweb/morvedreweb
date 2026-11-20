@@ -1,8 +1,7 @@
 const WHATSAPP = "34691200175";
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-// Los datos del formulario llegan a este correo (FormSubmit). El primer envío pide confirmarlo desde ese correo.
-const FORM_EMAIL = "morvedreweb@gmail.com";
+
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -214,13 +213,26 @@ function initForm() {
     submit.textContent = "Enviando…";
 
     const { _honey, privacidad, ...fields } = data;
-    try {
-      const res = await fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
+        try {
+      const res = await fetch(form.action, {
         method: "POST",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({ ...fields, _subject: `Nueva maqueta: ${fields.negocio}`, _template: "table" }),
+        body: JSON.stringify(data),
       });
+
+      if (res.status === 422) {
+        const { errors } = await res.json();
+        error.textContent = Object.values(errors).flat().join(" ");
+        error.hidden = false;
+        return;
+      }
+      if (res.status === 429) {
+        error.textContent = "Has enviado varias solicitudes seguidas. Espera unos minutos o escríbenos por WhatsApp.";
+        error.hidden = false;
+        return;
+      }
       if (!res.ok) throw new Error(res.status);
+
       form.hidden = true;
       done.hidden = false;
       form.reset();

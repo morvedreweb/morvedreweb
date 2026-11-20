@@ -54,7 +54,16 @@
       <article class="legal-text">
 
         <div class="good-news">
-          <p class="gn-title">Esta web no usa cookies.</p>
+            <p class="gn-title">Solo usamos cookies técnicas.</p>
+            <p>No usamos cookies de publicidad ni de análisis, ni propias ni de terceros.</p>
+            </div>
+
+            <h2>Cookies que usamos</h2>
+            <ul>
+            <li><b>morvedreweb-session</b>: mantiene tu sesión mientras navegas. Se borra al cabo de 2 horas sin actividad.</li>
+            <li><b>XSRF-TOKEN</b>: protege los formularios para que nadie pueda enviarlos en tu nombre desde otra web. Misma duración.</li>
+            </ul>
+            <p>Son cookies técnicas, necesarias para que la web funcione de forma segura, y por eso no requieren tu consentimiento (artículo 22.2 de la LSSI).</p>
           <p>Ni propias ni de terceros. Por eso no te sale ningún aviso de cookies al entrar.</p>
         </div>
 

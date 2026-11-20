@@ -89,8 +89,7 @@
         <ul>
           <li><b>WhatsApp</b> (Meta), si nos escribes por ahí.</li>
           <li><b>Gmail</b> (Google), si nos escribes por correo.</li>
-          <li><b>FormSubmit</b>, el servicio que nos reenvía por correo lo que escribes en el formulario.</li>
-          <li>La empresa de <b>alojamiento</b> de la web: <mark class="todo">nombre del proveedor de hosting</mark>.</li>
+          <li><b>Resend</b> (Resend, Inc., Estados Unidos), el servicio que usamos para que lo que escribes en el formulario nos llegue por correo. Actúa como encargado del tratamiento, está adherido al Marco de Privacidad de Datos UE-EE. UU. y la transferencia está cubierta además por cláusulas contractuales tipo.</li>          <li>La empresa de <b>alojamiento</b> de la web: <mark class="todo">nombre del proveedor de hosting</mark>.</li>
         </ul>
         <p>Algunos de estos servicios pueden guardar datos fuera de la Unión Europea. En ese caso lo hacen con las garantías que exige el Reglamento General de Protección de Datos, como el Marco de Privacidad de Datos UE-EE. UU. o las cláusulas contractuales tipo.</p>
 
