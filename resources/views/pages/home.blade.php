@@ -320,12 +320,13 @@
         </div>
         <label>¿Ya tienes web? <span class="opt">(pega el enlace si tienes)</span><input name="web_actual" type="text" inputmode="url"></label>
         <label>¿Algo que debamos saber? <span class="opt">(opcional)</span><textarea name="mensaje" rows="3"></textarea></label>
-        <label class="check"><p class="opt" style="font-size: .8rem; line-height: 1.4;">
-  Responsable: morvedreweb. Finalidad: responder a tu solicitud y prepararte la maqueta.
-  Legitimación: medidas precontractuales a petición tuya. Destinatarios: Resend (EE. UU., con garantías adecuadas) para hacernos llegar el formulario.
-  Derechos: acceso, rectificación, supresión y otros, en morvedreweb@gmail.com.
-  Más información en la <a href="{{ route('legal.privacidad') }}" target="_blank">política de privacidad</a>.
-</p><input type="checkbox" name="privacidad" required> <span>He leído y acepto la <a href="{{ route('legal.privacidad') }}" target="_blank">política de privacidad</a>.</span></label>
+        <label class="check"><input type="checkbox" name="privacidad" required> <span>He leído y acepto la <a href="{{ route('legal.privacidad') }}" target="_blank">política de privacidad</a>.</span></label>
+        <p class="opt" style="font-size: .8rem; line-height: 1.4;">
+          Responsable: morvedreweb. Finalidad: responder a tu solicitud y prepararte la maqueta.
+          Legitimación: medidas precontractuales a petición tuya. Destinatarios: Resend (EE. UU., con garantías adecuadas) para hacernos llegar el formulario.
+          Derechos: acceso, rectificación, supresión y otros, en morvedreweb@gmail.com.
+          Más información en la <a href="{{ route('legal.privacidad') }}" target="_blank">política de privacidad</a>.
+        </p>
         <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="form-error" role="alert" hidden></p>
         <button class="btn btn-orange btn-xl" type="submit">Solicitar maqueta gratis</button>

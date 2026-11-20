@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SolicitudController;
 
 Route::post('/solicitar', SolicitudController::class)
-    ->middleware('throttle:3,10')
+    ->middleware('throttle:5,10')
     ->name('solicitud.store');
 
 Route::view('/', 'pages.home')->name('home');
