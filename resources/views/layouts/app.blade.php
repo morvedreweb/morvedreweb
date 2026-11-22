@@ -32,7 +32,12 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#FF7A1A">
+  {{-- Iconos: Google Search usa el favicon cuadrado (mínimo 48x48); /favicon.ico es el que piden muchos rastreadores por defecto --}}
+  <link rel="icon" href="{{ asset('favicon.ico') }}" sizes="48x48">
   <link rel="icon" href="{{ asset('img/favicon.svg') }}" type="image/svg+xml">
+  <link rel="icon" href="{{ asset('img/favicon-96.png') }}" type="image/png" sizes="96x96">
+  <link rel="icon" href="{{ asset('img/favicon-192.png') }}" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="{{ asset('img/apple-touch-icon.png') }}">
   @stack('preload')
   {{-- ?v= cambia cuando cambia el archivo: así el navegador no usa una versión antigua guardada en caché --}}
   <link rel="stylesheet" href="{{ asset('css/styles.css') }}?v={{ filemtime(public_path('css/styles.css')) }}">
