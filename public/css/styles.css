@@ -681,3 +681,6 @@ h3 { font-size: 1.15rem; line-height: 1.25; letter-spacing: -.01em; font-weight:
 @media (max-width: 560px) {
   .about-hero h1, .legal-hero h1 { font-size: clamp(1.7rem, 8.6vw, 2.2rem); overflow-wrap: break-word; hyphens: auto; }
 }
+
+/* Pie: línea con la zona de trabajo, a todo el ancho */
+.footer-zona { flex-basis: 100%; margin: 0; font-size: .85rem; opacity: .85; }

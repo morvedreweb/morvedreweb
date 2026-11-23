@@ -1,7 +1,6 @@
 <nav class="topbar wrap" aria-label="Principal">
   <x-logo />
   <div class="links" id="links">
-    <a href="{{ route('home') }}#proyectos">Proyectos</a>
     <a href="{{ route('home') }}#proceso">Cómo trabajamos</a>
     <a href="{{ route('home') }}#precios">Precios</a>
     <a href="{{ route('services.index') }}" @if (request()->routeIs('services.*')) aria-current="page" @endif>Servicios</a>

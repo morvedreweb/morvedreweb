@@ -9,5 +9,6 @@
       <a href="{{ route('legal.cookies') }}">Cookies</a>
     </nav>
     <p>© <span class="year">{{ date('Y') }}</span> morvedreweb. Todos los derechos reservados.</p>
+    <p class="footer-zona">Diseño web en Sagunto, Puerto de Sagunto, Canet d'en Berenguer, Faura, Petrés, Gilet y todo el Camp de Morvedre.</p>
   </div>
 </footer>

@@ -92,6 +92,7 @@ function initHero() {
 
 function initPortfolio() {
   const tabs = $(".show-tabs");
+  if (!tabs) return; // la sección de proyectos se quitó hasta tener clientes reales
   const screens = $$('.screen[data-screen="show"]');
   const url = $(".show-desk .window-url");
   const brief = $(".show-brief");

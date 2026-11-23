@@ -19,7 +19,7 @@ return [
             'Maqueta gratis antes de pagar',
             'Adaptada a móvil, tablet y ordenador',
             'Tus textos, fotos y colores',
-            'Publicada en unas dos semanas',
+            'Publicada con tu dominio',
         ],
     ],
     [
@@ -90,7 +90,7 @@ return [
     [
         'slug' => 'mantenimiento',
         'nombre' => 'Mantenimiento mensual',
-        'resumen' => 'Nos encargamos de todo para que tú solo nos escribas cuando quieras cambiar algo.',
+        'resumen' => 'Opcional: nos encargamos de todo para que tú solo nos escribas cuando quieras cambiar algo.',
         'contenido' => [
             'Una web no se termina el día que se publica: hay que renovar el dominio, mantener el hosting, actualizar el certificado de seguridad, hacer copias y cambiar horarios, precios o fotos. Con el mantenimiento mensual, de todo eso nos encargamos nosotros.',
             'Cuando quieras cambiar algo, nos escribes por WhatsApp o por correo y lo hacemos en uno o dos días laborables. El dominio está a tu nombre desde el primer día, así que la web es tuya.',

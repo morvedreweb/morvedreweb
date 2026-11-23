@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Diseño web en Sagunto para negocios | morvedreweb')
-@section('description', 'Diseño web en Sagunto y el Camp de Morvedre: hacemos la web de tu negocio y la mantenemos cada mes, con dominio, hosting y Google incluidos.')
+@section('description', 'Diseño web en Sagunto, Puerto de Sagunto y el Camp de Morvedre: hacemos la web de tu negocio y la mantenemos cada mes, con dominio, hosting y Google incluidos.')
 @section('og_title', 'morvedreweb | Webs que dan ganas de entrar')
 @section('og_description', 'Webs para negocios, hechas a medida y mantenidas cada mes. Desde Sagunto, para cualquier sitio.')
 
@@ -31,7 +31,11 @@
       ],
       'areaServed'  => [
           ['@type' => 'City', 'name' => 'Sagunto'],
+          ['@type' => 'Place', 'name' => 'Puerto de Sagunto'],
           ['@type' => 'City', 'name' => 'Canet d\'en Berenguer'],
+          ['@type' => 'City', 'name' => 'Faura'],
+          ['@type' => 'City', 'name' => 'Petrés'],
+          ['@type' => 'City', 'name' => 'Gilet'],
           ['@type' => 'City', 'name' => 'Puçol'],
           ['@type' => 'AdministrativeArea', 'name' => 'Camp de Morvedre'],
           ['@type' => 'City', 'name' => 'Valencia'],
@@ -50,13 +54,13 @@
 @section('hero')
   <div class="hero-grid wrap">
       <div class="hero-copy">
-        <p class="hero-pre">Diseño web en Sagunto para pymes y negocios</p>
+        <p class="hero-pre">Diseño web para negocios de Sagunto y el Camp de Morvedre</p>
         <h1 class="hero-title">
           <span class="line"><span>Webs que dan</span></span>
           <span class="line"><span>ganas de entrar</span></span>
           <span class="line"><span>a tu <span class="rot-word">panadería</span></span></span>
         </h1>
-        <p class="hero-sub">Te enseñamos una maqueta de tu web gratis. Si te gusta, la publicamos y la cuidamos cada mes. Tú solo nos escribes cuando quieras cambiar algo.</p>
+        <p class="hero-sub">Te enseñamos una maqueta de tu web gratis. Si te gusta, la publicamos. Y si quieres, la cuidamos cada mes para que tú solo nos escribas cuando quieras cambiar algo.</p>
         <div class="hero-actions">
           <a href="#solicitar" class="btn btn-dark js-open-form">Solicitar maqueta de mi web</a>
           <a href="#precios" class="btn btn-light">Ver precios</a>
@@ -85,36 +89,11 @@
 @endsection
 
 @section('content')
-  {{-- pega desde <section class="portfolio"> hasta el final de <section class="faq"> --}}
-    <section class="portfolio" id="proyectos">
-      <div class="wrap">
-        <div class="portfolio-head">
-          <h2>Proyectos</h2>
-          <p>Cinco negocios inventados para que veas cómo trabajamos: cada uno con su diseño, sus colores y lo que de verdad necesita. Pronto, aquí, los de nuestros primeros clientes.</p>
-        </div>
-
-        <div class="showcase">
-          <div class="show-tabs" role="tablist" aria-label="Proyectos de muestra"></div>
-          <div class="show-stage" aria-hidden="true">
-            <div class="show-desk">
-              <div class="window-bar"><i></i><i></i><i></i><span class="window-url"></span></div>
-              <div class="screen" data-screen="show"></div>
-            </div>
-            <div class="show-phone"><div class="screen is-phone" data-screen="show"></div></div>
-          </div>
-          <div class="show-note" role="tabpanel" aria-live="polite">
-            <p class="show-brief"></p>
-            <ul class="show-list"></ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="process" id="proceso">
       <div class="wrap">
         <div class="process-head">
           <h2>Cómo trabajamos</h2>
-          <p>Así sería con una peluquería, de la primera llamada a la web publicada. Unas dos semanas, y sin pagar nada hasta que te guste.</p>
+          <p>Así sería con una peluquería del Puerto de Sagunto, de la primera llamada a la web publicada. Y sin pagar nada hasta que te guste.</p>
         </div>
         <ol class="steps">
           <li>
@@ -123,7 +102,7 @@
               <p class="bubble ours">Claro. ¿Te llamamos mañana a las 10?</p>
               <p class="bubble">Perfecto, hablamos</p>
             </div>
-            <p class="step-meta"><span class="step-n">1</span>Día 1</p>
+            <p class="step-meta"><span class="step-n">1</span>La primera charla</p>
             <h3>Nos cuentas tu negocio</h3>
             <p>Una llamada o un café de 15 minutos: qué haces, a quién quieres llegar y qué te gusta.</p>
             <p class="step-you">Tú: contarnos tu negocio</p>
@@ -133,7 +112,7 @@
               <div class="mock-phone"><div class="screen is-phone" data-screen="step"></div></div>
               <p class="bubble">¡Me encanta! Cambiad el rosa por uno más oscuro</p>
             </div>
-            <p class="step-meta"><span class="step-n">2</span>2-3 días</p>
+            <p class="step-meta"><span class="step-n">2</span>La maqueta</p>
             <h3>Te enseñamos la maqueta</h3>
             <p>Diseñamos tu web y te la enseñamos funcionando, en tu móvil. Gratis y sin compromiso.</p>
             <p class="step-you">Tú: decirnos qué te parece</p>
@@ -147,7 +126,7 @@
                 <li>Horario y reservas</li>
               </ul>
             </div>
-            <p class="step-meta"><span class="step-n">3</span>1 semana</p>
+            <p class="step-meta"><span class="step-n">3</span>Los detalles</p>
             <h3>La terminamos contigo</h3>
             <p>Añadimos tus fotos, textos, servicios y lo que necesites: reservas, citas, carta o catálogo.</p>
             <p class="step-you">Tú: pasarnos fotos y datos</p>
@@ -162,7 +141,7 @@
                 <p class="g-actions"><span>Sitio web</span><span>Llamar</span><span>Cómo llegar</span></p>
               </div>
             </div>
-            <p class="step-meta"><span class="step-n">4</span>2 semanas</p>
+            <p class="step-meta"><span class="step-n">4</span>La publicación</p>
             <h3>Publicada y en Google</h3>
             <p>Con tu dominio, tu ficha de Google al día y probada en móvil y ordenador. Desde ahí, la mantenemos nosotros.</p>
             <p class="step-you">Tú: nada más</p>
@@ -178,7 +157,7 @@
       <div class="wrap">
         <div class="pricing-head">
           <h2>Precios</h2>
-          <p>Pagas la web una sola vez y después una cuota al mes para mantenerla. IVA incluido.</p>
+          <p>La web se paga una sola vez y es tuya. El mantenimiento mensual es opcional: lo contratas si quieres que nos encarguemos de todo y lo dejas cuando quieras. IVA incluido.</p>
         </div>
 
         <div class="plans">
@@ -186,14 +165,14 @@
             <h3>Esencial</h3>
             <p class="plan-for">Para estar bien presente: quién eres, dónde estás y cuándo abres.</p>
             <div class="price">
-              <p><b>90 €</b>la web, una vez</p>
-              <p class="monthly">+ 30 € al mes de mantenimiento</p>
+              <p><b>90 €</b>la web, pago único</p>
+              <p class="monthly">Mantenimiento opcional: 30 € al mes</p>
             </div>
             <ul>
               <li>Web de una página</li>
               <li>Ficha de Google configurada</li>
               <li>Botón de WhatsApp y llamada</li>
-              <li>2 cambios al mes</li>
+              <li>2 cambios al mes, con mantenimiento</li>
             </ul>
             <a href="#solicitar" class="btn btn-outline js-open-form" data-plan="Esencial">Lo quiero</a>
           </article>
@@ -203,14 +182,14 @@
             <h3>Profesional</h3>
             <p class="plan-for">Para que la web te traiga clientes: clínicas, talleres, academias, restaurantes.</p>
             <div class="price">
-              <p><b>210 €</b>la web, una vez</p>
-              <p class="monthly">+ 60 € al mes de mantenimiento</p>
+              <p><b>210 €</b>la web, pago único</p>
+              <p class="monthly">Mantenimiento opcional: 60 € al mes</p>
             </div>
             <ul>
               <li>Web de hasta 6 secciones</li>
               <li>Reservas y citas online</li>
-              <li>Google y SEO local cada mes</li>
-              <li>Cambios sin límite</li>
+              <li>SEO local cada mes, con mantenimiento</li>
+              <li>Cambios sin límite, con mantenimiento</li>
             </ul>
             <a href="#solicitar" class="btn btn-orange js-open-form" data-plan="Profesional">Lo quiero</a>
           </article>
@@ -219,21 +198,21 @@
             <h3>Completo</h3>
             <p class="plan-for">Para pymes que quieren llegar más lejos, también desde el móvil de sus clientes.</p>
             <div class="price">
-              <p><b>600 €</b>la web, una vez</p>
-              <p class="monthly">+ 150 € al mes de mantenimiento</p>
+              <p><b>600 €</b>la web, pago único</p>
+              <p class="monthly">Mantenimiento opcional: 150 € al mes</p>
             </div>
             <ul>
               <li>Todo lo del Profesional</li>
               <li>Web instalable como app en el móvil</li>
               <li>Catálogo, carta digital o tienda</li>
-              <li>Informe mensual de resultados</li>
+              <li>Informe mensual, con mantenimiento</li>
             </ul>
             <a href="#solicitar" class="btn btn-outline js-open-form" data-plan="Completo">Lo quiero</a>
           </article>
         </div>
 
         <p class="plans-hint">Desliza para ver los tres planes</p>
-        <p class="always">Siempre incluido en el mantenimiento: dominio a tu nombre, hosting, certificado de seguridad, copias de seguridad y textos legales (aviso legal, privacidad y cookies).</p>
+        <p class="always">Con mantenimiento nos encargamos de todo: dominio a tu nombre, hosting, certificado de seguridad, copias de seguridad y textos legales (aviso legal, privacidad y cookies). Sin mantenimiento, te entregamos la web terminada y el dominio a tu nombre para que la alojes donde prefieras.</p>
       </div>
     </section>
 
@@ -246,6 +225,10 @@
             <p>Sí. El dominio va a tu nombre desde el primer día y la web la pagas tú, así que es tuya.</p>
           </details>
           <details>
+            <summary>¿Tengo que pagar el mantenimiento sí o sí?</summary>
+            <p>No. Pagas la web una vez y es tuya. El mantenimiento es opcional: si lo contratas, nos ocupamos del hosting, la seguridad y los cambios; si no, te entregamos la web y el dominio para que la lleves tú o quien quieras.</p>
+          </details>
+          <details>
             <summary>¿Y si un día quiero dejar el mantenimiento?</summary>
             <p>Nos avisas con un mes de antelación. La web y el dominio son tuyos: te damos una copia de todo para que la lleve quien quieras.</p>
           </details>
@@ -256,6 +239,10 @@
           <details>
             <summary>¿Cómo pido un cambio?</summary>
             <p>Por WhatsApp o por correo. Los cambios pequeños los hacemos en uno o dos días laborables.</p>
+          </details>
+          <details>
+            <summary>¿Trabajáis solo en Sagunto?</summary>
+            <p>Estamos en Sagunto y trabajamos con negocios de todo el Camp de Morvedre: Puerto de Sagunto, Canet d'en Berenguer, Faura, Petrés, Gilet y los pueblos de alrededor. Si estás más lejos, nos vemos por videollamada.</p>
           </details>
           <details>
             <summary>Ya tengo web. ¿Podéis mejorarla?</summary>
@@ -278,7 +265,6 @@
 @endsection
 
 @section('modal')
-  {{-- pega el <div class="form-overlay" id="solicitar"> ... </div> completo --}}
     <div class="form-overlay" id="solicitar" role="dialog" aria-modal="true" aria-labelledby="form-title" hidden>
     <div class="form-shell">
       <button class="form-close" type="button" aria-label="Cerrar">
@@ -287,7 +273,7 @@
 
       <div class="form-side">
         <h2 id="form-title">Solicita la maqueta de tu web</h2>
-        <p>Gratis y sin compromiso. Te la enseñamos funcionando en 2-3 días.</p>
+        <p>Gratis y sin compromiso. Te la enseñamos funcionando en tu móvil.</p>
         <ul>
           <li>Diseño a medida para tu negocio</li>
           <li>Pagas solo si te gusta</li>
